@@ -101,8 +101,27 @@ int main(int argc, const char * argv[]) {
     
     std::cin >> inputAngka;
     
+//    for (int i = inputAngka; i >= 0; i--) {
+//        std::cout << "Bilangan " << i << ", hasil " << i << " * " << i << " = " << i * i << std::endl;
+//    }
+    
     for (int i = inputAngka; i >= 0; i--) {
-        std::cout << "Bilangan " << i << ", hasil " << i << " * " << i << " = " << i * i << std::endl;
+        bool angka_prima = true;
+        
+        if (i == 0 || i == 1) {
+            angka_prima = false;
+        } else {
+            for (int j = 2; j <= i / 2; j++) {
+                if (i % j == 0) {
+                    angka_prima = false;
+                    break;
+                }
+            }
+        }
+        
+        if (angka_prima){
+            std::cout << i << " adalah angka prima" << std::endl;
+        }
     }
     
     return 0;
