@@ -78,7 +78,7 @@ int main(int argc, const char * argv[]) {
 //            std::cout << "Tidak ada bulan yang dipilih";
 //    }
     
-    int i = 1;
+//    int i = 1;
 //    while (i <= 10) {
 //        if (i % 2 == 0) {
 //            std::cout << i << ", ";
@@ -86,14 +86,24 @@ int main(int argc, const char * argv[]) {
 //        i++;
 //    }
     
-    do {
-        if (i % 2 == 0) {
-            std::cout << i << " adalah angka genap" << std::endl;
-        } else {
-            std::cout << i << " adalah angka ganjil" << std::endl;
-        }
-        i++;
-    } while (i <= 10);
+//    do {
+//        if (i % 2 == 0) {
+//            std::cout << i << " adalah angka genap" << std::endl;
+//        } else {
+//            std::cout << i << " adalah angka ganjil" << std::endl;
+//        }
+//        i++;
+//    } while (i <= 10);
+    
+    int inputAngka;
+    
+    std::cout << "Masukkan angka" << std::endl;
+    
+    std::cin >> inputAngka;
+    
+    for (int i = inputAngka; i >= 0; i--) {
+        std::cout << "Bilangan " << i << ", hasil " << i << " * " << i << " = " << i * i << std::endl;
+    }
     
     return 0;
 }
