@@ -79,12 +79,21 @@ int main(int argc, const char * argv[]) {
 //    }
     
     int i = 1;
-    while (i <= 10) {
+//    while (i <= 10) {
+//        if (i % 2 == 0) {
+//            std::cout << i << ", ";
+//        }
+//        i++;
+//    }
+    
+    do {
         if (i % 2 == 0) {
-            std::cout << i << ", ";
+            std::cout << i << " adalah angka genap" << std::endl;
+        } else {
+            std::cout << i << " adalah angka ganjil" << std::endl;
         }
         i++;
-    }
+    } while (i <= 10);
     
     return 0;
 }
