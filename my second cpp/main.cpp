@@ -95,32 +95,48 @@ int main(int argc, const char * argv[]) {
 //        i++;
 //    } while (i <= 10);
     
-    int inputAngka;
-    
-    std::cout << "Masukkan angka" << std::endl;
-    
-    std::cin >> inputAngka;
+//    int inputAngka;
+//
+//    std::cout << "Masukkan angka" << std::endl;
+//
+//    std::cin >> inputAngka;
     
 //    for (int i = inputAngka; i >= 0; i--) {
 //        std::cout << "Bilangan " << i << ", hasil " << i << " * " << i << " = " << i * i << std::endl;
 //    }
     
-    for (int i = inputAngka; i >= 0; i--) {
-        bool angka_prima = true;
-        
-        if (i == 0 || i == 1) {
-            angka_prima = false;
+//    for (int i = inputAngka; i >= 0; i--) {
+//        bool angka_prima = true;
+//
+//        if (i == 0 || i == 1) {
+//            angka_prima = false;
+//        } else {
+//            for (int j = 2; j <= i / 2; j++) {
+//                if (i % j == 0) {
+//                    angka_prima = false;
+//                    break;
+//                }
+//            }
+//        }
+//
+//        if (angka_prima){
+//            std::cout << i << " adalah angka prima" << std::endl;
+//        }
+//    }
+    
+    std::string inputSiswa;
+    
+    std::cout << "Cari Siswa" << std::endl;
+    
+    std::cin >> inputSiswa;
+    
+    std::string siswa[] = {"Ani","Budi","Caca","Dedi","Eni","Fahri"};
+    
+    for (int i = 0; i < sizeof(siswa)/sizeof(siswa[0]); i++) {
+        if (siswa[i] != inputSiswa){
+            continue;
         } else {
-            for (int j = 2; j <= i / 2; j++) {
-                if (i % j == 0) {
-                    angka_prima = false;
-                    break;
-                }
-            }
-        }
-        
-        if (angka_prima){
-            std::cout << i << " adalah angka prima" << std::endl;
+            std::cout << "Siswa yang bernama " << siswa[i] << " ditemukan pada index ke " << i << std::endl;
         }
     }
     
